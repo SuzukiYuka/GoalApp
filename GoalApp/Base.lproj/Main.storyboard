@@ -1,25 +1,163 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GoalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-yI-AUx">
+                                <rect key="frame" x="55" y="47" width="208" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhx-Wm-FAG">
+                                <rect key="frame" x="78" y="151" width="164" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y3-qQ-6Zv">
+                                <rect key="frame" x="78" y="221" width="164" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1H-sk-vcw">
+                                <rect key="frame" x="78" y="359" width="164" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfL-iI-6ca">
+                                <rect key="frame" x="250" y="221" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89944209035497724" blue="0.9531993140129299" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="check3" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sRe-Nc-mZv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O00-BJ-58g">
+                                <rect key="frame" x="250" y="292" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89944209035497724" blue="0.9531993140129299" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="check4" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hem-ex-0zI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-Fj-1oR">
+                                <rect key="frame" x="250" y="359" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89944209035497724" blue="0.9531993140129299" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="check5" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FdJ-Jd-GDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-KB-lw0">
+                                <rect key="frame" x="250" y="153" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89944209035497724" blue="0.9531993140129299" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="check2" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EA5-cM-w38"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-3T-x85">
+                                <rect key="frame" x="271" y="62" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89944209035497724" blue="0.9531993140129299" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="dPV-FV-toj" kind="show" id="6Gc-8U-D5T"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mizubuu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-cJ-6Hz">
+                                <rect key="frame" x="16" y="359" width="42" height="35"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6B1-5j-zpH">
+                                <rect key="frame" x="78" y="289" width="164" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mizubuu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-wE-agb">
+                                <rect key="frame" x="16" y="287" width="42" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mizubuu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="baV-rg-0gm">
+                                <rect key="frame" x="16" y="221" width="42" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mizubuu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-Dj-2Rr">
+                                <rect key="frame" x="16" y="153" width="42" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mizubuu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="nmm-Eh-0mN">
+                                <rect key="frame" x="5" y="62" width="42" height="35"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="checkbtn1" destination="Nej-3T-x85" id="w2W-S2-eon"/>
+                        <outlet property="checkbtn2" destination="Pt6-KB-lw0" id="g2y-Up-EjR"/>
+                        <outlet property="checkbtn3" destination="yfL-iI-6ca" id="Rtv-Z1-Jog"/>
+                        <outlet property="checkbtn4" destination="O00-BJ-58g" id="2ko-NL-RGf"/>
+                        <outlet property="checkbtn5" destination="EuZ-Fj-1oR" id="u2x-w9-6ne"/>
+                        <outlet property="imageView1" destination="nmm-Eh-0mN" id="crY-Wk-oc8"/>
+                        <outlet property="imageView2" destination="RkZ-Dj-2Rr" id="gcm-Xs-rPj"/>
+                        <outlet property="imageView3" destination="baV-rg-0gm" id="5KQ-bq-xgg"/>
+                        <outlet property="imageView4" destination="7Vc-wE-agb" id="XDy-3w-mFc"/>
+                        <outlet property="imageView5" destination="ixp-cJ-6Hz" id="VSy-1c-Fhs"/>
+                        <outlet property="textField1" destination="HyF-yI-AUx" id="yqU-SF-3qh"/>
+                        <outlet property="textField2" destination="jhx-Wm-FAG" id="DZN-jK-Sni"/>
+                        <outlet property="textField3" destination="7y3-qQ-6Zv" id="URt-pB-fNw"/>
+                        <outlet property="textField4" destination="6B1-5j-zpH" id="BZ2-fW-BhG"/>
+                        <outlet property="textField5" destination="Y1H-sk-vcw" id="ZfL-Xn-1fy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="204" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uI1-cy-sd1">
+            <objects>
+                <viewController id="dPV-FV-toj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0y4-bu-IbI"/>
+                        <viewControllerLayoutGuide type="bottom" id="625-ZU-x2n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mFB-7y-FOI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標達成！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-8m-4dF">
+                                <rect key="frame" x="118" y="215" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Om1-Yx-Dwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mizubuu2.png" width="184" height="155"/>
+    </resources>
 </document>
