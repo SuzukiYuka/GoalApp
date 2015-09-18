@@ -29,161 +29,81 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet var imageView3: UIImageView!
     @IBOutlet var imageView4: UIImageView!
     @IBOutlet var imageView5: UIImageView!
+    
+    var textFieldArray:[UITextField] = []
+    var checkbtnArray:[UIButton] = []
+    var imageViewArray:[UIImageView] = []
 
     
     //最初によみこむところ
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textFieldArray = [textField1,textField2,textField3,textField4,textField5]
+        checkbtnArray = [checkbtn1,checkbtn2,checkbtn3,checkbtn4,checkbtn5]
+        imageViewArray = [imageView1,imageView2,imageView3,imageView4,imageView5]
+        
         // Do any additional setup after loading the view, typically from a nib.
         //textFieldのデリゲートをセットする
-        textField1.delegate = self
-        textField2.delegate = self
-        textField3.delegate = self
-        textField4.delegate = self
-        textField5.delegate = self
+        for tf in textFieldArray{
+            tf.delegate = self
+        }
         
         //チェックボタンの上4つは押しても反応しないようにする
-        checkbtn1.enabled = false
-        checkbtn2.enabled = false
-        checkbtn3.enabled = false
-        checkbtn4.enabled = false
+        for bt in checkbtnArray[0...3] {
+            bt.enabled = false   // 要素をログに出力する
+        }
         
         //画像を隠す
-        imageView1.hidden = true
-        imageView2.hidden = true
-        imageView3.hidden = true
-        imageView4.hidden = true
-        
+        for iv in imageViewArray[0...3]{
+            iv.hidden = true
+        }
     }
-    
-    
     
     @IBAction func check2() {
-        checkbtn2.setTitle("✔", forState: .Normal)
-        checkbtn1.enabled = true
-        checkbtn2.enabled = false
-        
-        imageView2.hidden = true
-        imageView1.hidden = false
-        
-        
-        let text = NSAttributedString(string: self.textField2.text, attributes: [
-            NSStrikethroughStyleAttributeName : NSUnderlineStyle.StyleSingle.rawValue ])
-        
-        textField2.attributedText = text
-        
-        UIView.animateWithDuration(0.3,
-            
-            // アニメーション中の処理.
-            animations: { () -> Void in
-                self.imageView1.transform = CGAffineTransformMakeScale(0.4, 0.4)
-                self.imageView1.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                
-            })
-            { (Bool) -> Void in
-                
-        }
-        
+        check(1)
     }
-    
     @IBAction func check3() {
-        checkbtn3.setTitle("✔", forState: .Normal)
-        checkbtn2.enabled = true
-        checkbtn3.enabled = false
-        
-        imageView3.hidden = true
-        imageView2.hidden = false
-        
-        let text = NSAttributedString(string: self.textField3.text, attributes: [
-            NSStrikethroughStyleAttributeName : NSUnderlineStyle.StyleSingle.rawValue ])
-        
-        textField3.attributedText = text
-        
-        UIView.animateWithDuration(0.3,
-            
-            // アニメーション中の処理.
-            animations: { () -> Void in
-                self.imageView2.transform = CGAffineTransformMakeScale(0.4, 0.4)
-                self.imageView2.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                
-            })
-            { (Bool) -> Void in
-                
-        }
+        check(2)
     }
-    
     @IBAction func check4() {
-        checkbtn4.setTitle("✔", forState: .Normal)
-        checkbtn3.enabled = true
-        checkbtn4.enabled = false
-        
-        imageView4.hidden = true
-        imageView3.hidden = false
-        
-        let text = NSAttributedString(string: self.textField4.text, attributes: [
-            NSStrikethroughStyleAttributeName : NSUnderlineStyle.StyleSingle.rawValue ])
-        
-        textField4.attributedText = text
-        
-        UIView.animateWithDuration(0.3,
-            
-            // アニメーション中の処理.
-            animations: { () -> Void in
-                self.imageView3.transform = CGAffineTransformMakeScale(0.4, 0.4)
-                self.imageView3.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                
-            })
-            { (Bool) -> Void in
-                
-        }
+        check(3)
     }
-    
     @IBAction func check5() {
-        //チェックをいれる
-        checkbtn5.setTitle("✔", forState: .Normal)
-        
-        //一個上のボタンを使えるように
-        checkbtn4.enabled = true
-        //自分は使えないように
-        checkbtn5.enabled = false
-        
-        //今いる画像を隠す
-        imageView5.hidden = true
-        
-        //一個上の画像を表示
-        imageView4.hidden = false
-        
-        //打ち消し線をいれる
-        let text = NSAttributedString(string: self.textField5.text, attributes: [
-            NSStrikethroughStyleAttributeName : NSUnderlineStyle.StyleSingle.rawValue ])
-        textField5.attributedText = text
-        
-        //ふわってなるアニメーション
-        UIView.animateWithDuration(0.3,
-            
-            // アニメーション中の処理.
-            animations: { () -> Void in
-                self.imageView4.transform = CGAffineTransformMakeScale(0.4, 0.4)
-                self.imageView4.transform = CGAffineTransformMakeScale(1.0, 1.0)
-                
-            })
-            { (Bool) -> Void in
-                
-        }
+        check(4)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func check(checknum:Int){
+        checkbtnArray[checknum].setTitle("✔", forState: .Normal)
+        checkbtnArray[checknum-1].enabled = true
+        checkbtnArray[checknum].enabled = false
+        
+        imageViewArray[checknum].hidden = true
+        imageViewArray[checknum-1].hidden = false
+        
+        let text = NSAttributedString(string: self.textFieldArray[checknum].text, attributes: [
+            NSStrikethroughStyleAttributeName : NSUnderlineStyle.StyleSingle.rawValue ])
+        
+        textFieldArray[checknum].attributedText = text
+        
+        UIView.animateWithDuration(0.3,
+            // アニメーション中の処理.
+            animations: { () -> Void in
+                self.imageViewArray[checknum-1].transform = CGAffineTransformMakeScale(0.4, 0.4)
+                self.imageViewArray[checknum-1].transform = CGAffineTransformMakeScale(1.0, 1.0)
+            })
+            { (Bool) -> Void in
+        }
+    }
 }
 
